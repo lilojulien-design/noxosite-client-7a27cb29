@@ -10,53 +10,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white font-sans antialiased">
          
-         <div id="header" dangerouslySetInnerHTML={{ __html: `<header class="sticky top-0 z-50 backdrop-blur-xl bg-neutral-950/80 border-b border-white/5 font-serif">
-  <nav class="container mx-auto px-6 h-24 flex items-center justify-between">
-    <!-- Brand Logo -->
-    <div class="flex-shrink-0">
-      <a href="/" class="group relative">
-        <span class="text-2xl md:text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#ba34d5] to-[#33e1b5] transition-all duration-500 group-hover:opacity-80">
-          Julien de Alma
-        </span>
-        <div class="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-[#ba34d5] to-[#33e1b5] transition-all duration-500 group-hover:w-full"></div>
-      </a>
-    </div>
-
-    <!-- Navigation Links -->
-    <div class="hidden lg:flex items-center gap-12">
-      <a href="#ingenieur" class="group relative text-sm uppercase tracking-[0.2em] text-white/70 hover:text-white transition-colors">
-        L'Ingénieur
-        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#ba34d5]"></span>
-      </a>
-      <a href="#scientifique" class="group relative text-sm uppercase tracking-[0.2em] text-white/70 hover:text-white transition-colors">
-        Le Scientifique
-        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#33e1b5]"></span>
-      </a>
-      <a href="#spirituel" class="group relative text-sm uppercase tracking-[0.2em] text-white/70 hover:text-white transition-colors">
-        Le Spirituel
-        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
-      </a>
-    </div>
-
-    <!-- Actions -->
-    <div class="flex items-center gap-6">
-      <a href="#scan" class="relative inline-flex items-center justify-center px-8 py-3.5 overflow-hidden font-medium tracking-tighter text-white bg-neutral-900 rounded-full group">
-        <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-gradient-to-r from-[#ba34d5] to-[#33e1b5] rounded-full group-hover:w-56 group-hover:h-56"></span>
-        <span class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-neutral-700"></span>
-        <span class="relative text-xs uppercase tracking-widest">Scan de Cohérence</span>
-      </a>
-      
-      <!-- Mobile Menu Button -->
-      <button class="lg:hidden text-white hover:text-[#33e1b5] transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
-    </div>
-  </nav>
-</header>` }} />
-         
-
          <div id="hero" dangerouslySetInnerHTML={{ __html: `<section class='relative min-h-screen bg-neutral-950 text-white overflow-hidden font-serif selection:bg-[#ba34d5]/30'>
   <!-- Navbar -->
   <header class='fixed top-0 w-full z-50 backdrop-blur-md bg-black/50 border-b border-white/5'>
@@ -678,6 +631,59 @@ export default function Home() {
     </div>
   </div>
 </footer>` }} />
+         
+
+         <div id="header" dangerouslySetInnerHTML={{ __html: `"use client";
+
+import { Menu } from "lucide-react";
+
+export default function Header() {
+  return (
+    <header className="sticky top-0 z-50 backdrop-blur-xl bg-neutral-950/80 border-b border-white/5 font-serif">
+      <nav className="container mx-auto px-6 h-24 flex items-center justify-between">
+        {/* Brand Logo */}
+        <div className="flex-shrink-0">
+          <a href="/" className="group relative">
+            <span className="text-2xl md:text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#ba34d5] to-[#33e1b5] transition-all duration-500 group-hover:opacity-80">
+              Julien de Alma
+            </span>
+            <div className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-[#ba34d5] to-[#33e1b5] transition-all duration-500 group-hover:w-full"></div>
+          </a>
+        </div>
+
+        {/* Navigation Links */}
+        <div className="hidden lg:flex items-center gap-12">
+          <a href="#ingenieur" className="group relative text-sm uppercase tracking-[0.2em] text-white/70 hover:text-white transition-colors">
+            L'Ingénieur
+            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#ba34d5]"></span>
+          </a>
+          <a href="#scientifique" className="group relative text-sm uppercase tracking-[0.2em] text-white/70 hover:text-white transition-colors">
+            Le Scientifique
+            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#33e1b5]"></span>
+          </a>
+          <a href="#spirituel" className="group relative text-sm uppercase tracking-[0.2em] text-white/70 hover:text-white transition-colors">
+            Le Spirituel
+            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+          </a>
+        </div>
+
+        {/* Actions */}
+        <div className="flex items-center gap-6">
+          <a href="#scan" className="relative inline-flex items-center justify-center px-8 py-3.5 overflow-hidden font-medium tracking-tighter text-white bg-neutral-900 rounded-full group">
+            <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-gradient-to-r from-[#ba34d5] to-[#33e1b5] rounded-full group-hover:w-56 group-hover:h-56"></span>
+            <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-neutral-700"></span>
+            <span className="relative text-xs uppercase tracking-widest">Evoluez parmi les meilleurs</span>
+          </a>
+
+          {/* Mobile Menu Button */}
+          <button className="lg:hidden text-white hover:text-[#33e1b5] transition-colors">
+            <Menu className="h-8 w-8" />
+          </button>
+        </div>
+      </nav>
+    </header>
+  );
+}` }} />
          
     </main>
   );
